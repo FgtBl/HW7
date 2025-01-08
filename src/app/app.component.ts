@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {HomeComponent} from './home/home.component';
+import { RouterModule } from '@angular/router';
+
 
 @Component({
+  standalone: true,
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss'],
+  imports: [HomeComponent, RouterModule]
 })
 export class AppComponent {
-  title = 'AngFirstApp';
+  title = 'homes';
 }
